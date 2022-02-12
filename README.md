@@ -1,5 +1,5 @@
 # Multiple-Dispatch
-The idea is based on this https://stackoverflow.com/a/4641463, which is a modification of the code in artima.com/weblogs/viewpost.jsp?thread=101605 by Guido van van Rossum.
+The idea is based on this https://stackoverflow.com/a/4641463, which is a modification of the code in https://artima.com/weblogs/viewpost.jsp?thread=101605 by Guido van van Rossum.
 However, the problem with that approach is that it is not predictable which function will be dispatched as stated in the answer.
 
 Therefore, I have written this program. It tries to fit the type in the method resolution order (mro). 
