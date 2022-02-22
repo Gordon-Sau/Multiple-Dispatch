@@ -175,3 +175,18 @@ def test_mm_no_annotation():
     def foo(a, b):
         return 0
     assert foo(object(), object()) == 0
+
+def test_mm_invalid_args():
+    with pytest.raises(ValueError):
+        @mm
+        def foo(a: int, *, b, c):
+            return 0
+    with pytest.raises(ValueError):
+        @mm
+        def foo(a: int, *args):
+            return 0
+    with pytest.raises(ValueError):
+        @mm
+        def foo(a: int, **kwargs):
+            return 0
+    
