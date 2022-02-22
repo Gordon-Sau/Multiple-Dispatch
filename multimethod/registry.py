@@ -36,3 +36,6 @@ def mm(func):
 
 def clear_multimethod_registry():
     __registry.clear()
+
+def clear_multimethod_func(funcname):
+    return __registry.pop(funcname, None)
