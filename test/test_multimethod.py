@@ -1,10 +1,9 @@
 from multimethod import *
-from multimethod.registry import __registry
 import pytest
 
 @pytest.fixture
 def clear_registry():
-    __registry.clear()
+    clear_multimethod_registry()
 
 def test_simple_register_success(clear_registry):
     @multimethod(str, str)

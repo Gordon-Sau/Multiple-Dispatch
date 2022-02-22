@@ -33,3 +33,6 @@ def multimethod(*args):
 
 def mm(func):
     return multimethod()(func)
+
+def clear_multimethod_registry():
+    __registry.clear()
