@@ -189,4 +189,13 @@ def test_mm_invalid_args():
         @mm
         def foo(a: int, **kwargs):
             return 0
-    
+
+def test_duplicate_registration(clear_registry):
+    @mm
+    def foo(a: int, b: int):
+        return 0
+    assert foo(1, 2) == 0
+    @mm
+    def foo(a: int, b: int):
+        return 1
+    assert foo(1, 2) == 1

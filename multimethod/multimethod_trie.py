@@ -46,8 +46,6 @@ class __MultiMethodDict:
                 return
             value = value[types[i]]
 
-        if None in value:
-            raise TypeError("duplicate registration")
         value[None] = function
 
 
